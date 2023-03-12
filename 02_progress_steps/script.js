@@ -21,12 +21,12 @@ const color = () => {
 
 $(".prev").addEventListener("click", () => {
   items[active].classList.remove("active");
-  if (active > 0) active--;
+  active--;
   color();
 });
 
 $(".next").addEventListener("click", () => {
-  if (active < 3) active++;
+  active++;
   items[active].classList.add("active");
   color();
 });
