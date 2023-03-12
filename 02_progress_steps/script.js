@@ -6,7 +6,7 @@ const percent = ["0%"];
 const lineSplit = 100 / (items.length - 1);
 
 for (let i = 1; i < items.length; i++) {
-  percent.push(`${lineSplit * i}%`);
+  percent[i] = lineSplit * i + "%";
 }
 
 const color = () => {
