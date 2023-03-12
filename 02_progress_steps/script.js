@@ -9,27 +9,24 @@ const percent = {
   3: "100%",
 };
 
-const btnColor = () => {
+const color = () => {
+  $(".blue-line").style.width = percent[active];
+
   if (active === 0) $(".prev").disabled = true;
   else $(".prev").disabled = false;
+
   if (active === 3) $(".next").disabled = true;
   else $(".next").disabled = false;
 };
 
 $(".prev").addEventListener("click", () => {
-  if (active > 0) {
-    items[active].classList.remove("active");
-    active--;
-  }
-  $(".blue-line").style.width = percent[active];
-  btnColor();
+  items[active].classList.remove("active");
+  if (active > 0) active--;
+  color();
 });
 
 $(".next").addEventListener("click", () => {
-  if (active < 3) {
-    active++;
-    items[active].classList.add("active");
-  }
-  $(".blue-line").style.width = percent[active];
-  btnColor();
+  if (active < 3) active++;
+  items[active].classList.add("active");
+  color();
 });
