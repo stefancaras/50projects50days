@@ -9,7 +9,7 @@ h1 {
 }
 .container {
   width: fit-content;
-  margin: 40vh auto;
+  margin: 30vh auto;
 }
 .form {
   position: relative;
@@ -50,6 +50,7 @@ h1 {
   border-radius: 50%;
   top: 2px;
   right: 2px;
+  cursor: pointer;
 }
 .absolute-center {
   position: absolute;

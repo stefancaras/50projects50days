@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+body {
+  font-family: "Ubuntu";
+  margin: 0;
+}
+.container {
+  position: relative;
+}
+.bg {
+  height: 100vh;
+  background: url(./bg.jpg) no-repeat center center/cover;
+  filter: blur(100px);
+  transition: filter 5s;
+}
+.bg.active {
+  filter: blur(0);
+}
+.bg.active + .percent {
+  opacity: 0;
+}
+.percent {
+  position: absolute;
+  font-size: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 5s;
+}
